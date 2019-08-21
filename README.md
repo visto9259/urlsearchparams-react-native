@@ -11,16 +11,16 @@ It is a port of [jerrybendy/url-search-parmams-polyfill](https://github.com/jerr
 
 This can be installed using `yarn`:
 
-    $ yarn add urlsearchparams-react-native
+    $ yarn add @visto9259/urlsearchparams-react-native
 
 or using `npm`:
 
-    $ npm install urlsearchparams-react-native --save
+    $ npm install @visto9259/urlsearchparams-react-native --save
 
 Make sure to import the class:
 
 ```
-import {URLSearchParams} from 'urlsearchparams-react-native';
+import {URLSearchParams} from '@visto9259/urlsearchparams-react-native';
 ```
 
 ##Usage
