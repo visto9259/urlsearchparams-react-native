@@ -1,0 +1,13 @@
+{
+  "name": "urlsearchparams-react-native",
+  "version": "1.0.0",
+  "dependencies": {
+  },
+  "description": "URLSearchParams replacement for React Native applications",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/visto9259/urlsearchparams-react-native.git"
+  }
+}
