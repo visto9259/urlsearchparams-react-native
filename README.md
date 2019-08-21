@@ -24,3 +24,5 @@ import {URLSearchParams} from '@visto9259/urlsearchparams-react-native';
 ```
 
 ##Usage
+
+To come

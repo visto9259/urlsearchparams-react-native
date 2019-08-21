@@ -9,5 +9,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/visto9259/urlsearchparams-react-native.git"
-  }
+  },
+  "keywords": ["urlsearchparams","React Native", "url"]
 }
