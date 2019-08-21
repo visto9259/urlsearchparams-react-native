@@ -6,8 +6,6 @@
  * @licence MIT
 */
 
-const __URLSearchParams__ = "__URLSearchParams__";
-
 export class URLSearchParams {
     /**
      *
@@ -15,11 +13,13 @@ export class URLSearchParams {
      */
     constructor(search=null) {
         search = search || "";
-        if (search instanceof URLSearchParams || search instanceof RNURLSearchParams) {
+        if (search instanceof URLSearchParams) {
             search = search.toString();
         }
-        this[__URLSearchParams__] = this.parseToDict(search);
+        this.dict = this.parseToDict(search);
     }
+
+    dict = {};
 
     /**
      * Appends a specified key/value pair as a new search parameter
@@ -27,7 +27,7 @@ export class URLSearchParams {
      * @param {string} value
      */
     append( name, value) {
-        this.appendTo(this[__URLSearchParams__], name, value);
+        this.appendTo(this.dict, name, value);
     };
 
     /**
@@ -35,7 +35,7 @@ export class URLSearchParams {
      * @param {string} name
      */
     delete(name) {
-        delete this[__URLSearchParams__][name];
+        delete this.dict[name];
     };
 
     /**
@@ -44,8 +44,7 @@ export class URLSearchParams {
      * @return {string|null}
      */
     get(name) {
-        const dict = this[__URLSearchParams__];
-        return name in dict ? dict[name][0] : null;
+        return name in this.dict ? this.dict[name][0] : null;
     };
 
     /**
@@ -54,8 +53,7 @@ export class URLSearchParams {
      * @return {Array}
      */
     getAll(name) {
-        const dict = this[__URLSearchParams__];
-        return name in dict ? dict[name].slice(0) : []
+        return name in this.dict ? this.dict[name].slice(0) : []
     };
 
     /**
@@ -64,7 +62,7 @@ export class URLSearchParams {
      * @return {boolean}
      */
     has(name) {
-        return name in this[__URLSearchParams__];
+        return name in this.dict;
     };
 
     /**
@@ -74,7 +72,7 @@ export class URLSearchParams {
      * @param {string} value
      */
     set(name, value) {
-        this[__URLSearchParams__][name] = [''+value];
+        this.dict[name] = [''+value];
     };
 
     /**
@@ -82,7 +80,7 @@ export class URLSearchParams {
      * @return {string}
      */
     toString() {
-        const dict = this[__URLSearchParams__],
+        const dict = this.dict,
             query = [];
         let key, name, i, value;
         for (key in dict) {

@@ -1,6 +1,6 @@
 {
   "name": "@visto9259/urlsearchparams-react-native",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
   },
   "description": "URLSearchParams replacement for React Native applications",
@@ -10,5 +10,5 @@
     "type": "git",
     "url": "https://github.com/visto9259/urlsearchparams-react-native.git"
   },
-  "keywords": ["urlsearchparams","React Native", "url"]
+  "keywords": ["urlsearchparams","react-native", "url"]
 }
