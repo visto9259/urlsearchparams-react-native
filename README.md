@@ -1,4 +1,8 @@
 # urlsearchparams-react-native
+
+> If you are developing using Expo, URL and URLSearchParams are built-in in Expo SDK50 and this polyfill library is no longer needed.
+> 
+
 This is a replacement library for URLSearchParams for React Native apps.
 
 It is a port of [jerrybendy/url-search-parmams-polyfill](https://github.com/jerrybendy/url-search-params-polyfill.git) as a JS class. 
