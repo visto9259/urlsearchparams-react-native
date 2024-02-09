@@ -1,6 +1,6 @@
 {
   "name": "@visto9259/urlsearchparams-react-native",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": {
   },
   "description": "URLSearchParams replacement for React Native applications",
